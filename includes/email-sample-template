@@ -1,0 +1,464 @@
+<td valign="top" id="body_content" style="background-color: #fbf4ec;" bgcolor="#fbf4ec">
+	<!-- Content -->
+	<table border="0" cellpadding="20" cellspacing="0" width="100%">
+		<tbody>
+			<tr>
+				<td valign="top" id="body_content_inner_cell" style="padding: 20px 32px 32px;">
+					<div id="body_content_inner"
+						style="color: #4b4b4b; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; font-size: 16px; line-height: 150%; text-align: left;"
+						align="left">
+
+						<div class="email-introduction" style="padding-bottom: 24px;">
+							<p style="margin: 0 0 16px;">We’re getting in touch to let you know that order #6466 from
+								store test teeee has been cancelled.</p>
+						</div>
+
+						<h2 class="email-order-detail-heading"
+							style="color: #1e1e1e; display: block; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; font-size: 20px; font-weight: bold; line-height: 160%; margin: 0 0 18px; text-align: left;">
+							Order summary<br><span
+								style="color: #b7c4ca; display: block; font-size: 14px; font-weight: normal;"><a
+									class="link"
+									href="https://damyel.co.il/wp-admin/admin.php?page=wc-orders&amp;action=edit&amp;id=6466"
+									style="font-weight: normal; text-decoration: underline; color: #b7c4ca;">Order
+									#6466</a> (6 November 2025)</span></h2>
+
+						<div style="margin-bottom: 24px;">
+							<table class="td font-family email-order-details" cellspacing="0" cellpadding="6" border="0"
+								style="color: #4b4b4b; border: 0; vertical-align: middle; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; width: 100%;"
+								width="100%">
+								<tbody>
+									<tr class="order_item">
+										<td class="td font-family text-align-left"
+											style="color: #4b4b4b; border: 0; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: left; padding: 8px 12px; padding-left: 0; vertical-align: middle; word-wrap: break-word;"
+											align="left">
+											<table class="order-item-data"
+												style="color: #1e1e1e; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;">
+												<tbody>
+													<tr>
+														<td
+															style="vertical-align: middle; padding-left: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+															<img width="48" height="48"
+																src="https://damyel.co.il/wp-content/uploads/2025/09/coffret-totem-rh4.jpg-100x100.png"
+																class="attachment-48x48 size-48x48 skip-lazy no-lazyload lazyload-disabled no-lazy skip-lazyload"
+																alt="Rosh Hashanah Gift Box 4" data-skip-lazy="true"
+																style="border: none; display: inline-block; font-size: 14px; font-weight: bold; height: auto; outline: none; text-decoration: none; text-transform: capitalize; vertical-align: middle; margin-right: 24px; max-width: 100%;"
+																border="0"></td>
+														<td
+															style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+															Rosh Hashanah Gift Box 4<div class="email-order-item-meta"
+																style="color: #b7c4ca; font-size: 14px; line-height: 140%;">
+															</div>
+															<div class="afb-order-itemmeta-display"
+																style="margin-top: 6px;">
+																<div style="margin-bottom: 4px;"><strong>Recipient
+																		Address</strong></div>
+																<table class="afb-mini-address"
+																	style="margin-top: 4px; border-collapse: collapse; font-size: 12px;">
+																	<tbody>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">First Name</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Sides</font>
+																				</font>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Last Name</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				other</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Company</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				UrbanSofts</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Address line 1</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				House 689, Street 64, G9/4, Islamabad
+																			</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">City</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				Islamabad</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Postcode</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				04491</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Country</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						THE</font>
+																				</font>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<table class="afb-mini-contact"
+																	style="margin-top: 8px; border-collapse: collapse; font-size: 12px;">
+																	<tbody>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Recipient’s Phone Number
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				03554743763</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">Gift Message</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				testing 1</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+										<td class="td font-family text-align-right"
+											style="color: #4b4b4b; border: 0; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: right; padding: 8px 12px; vertical-align: middle;"
+											align="right">
+											×1 </td>
+										<td class="td font-family text-align-right"
+											style="color: #4b4b4b; border: 0; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: right; padding: 8px 12px; padding-right: 0; vertical-align: middle;"
+											align="right">
+											<span class="woocommerce-Price-amount amount">500&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₪</span></span>
+										</td>
+									</tr>
+
+									<tr class="order_item">
+										<td class="td font-family text-align-left"
+											style="color: #4b4b4b; border: 0; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: left; padding: 8px 12px; padding-left: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; vertical-align: middle; word-wrap: break-word;"
+											align="left">
+											<table class="order-item-data"
+												style="color: #1e1e1e; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;">
+												<tbody>
+													<tr>
+														<td
+															style="vertical-align: middle; padding-left: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+															<img width="48" height="48"
+																src="https://damyel.co.il/wp-content/uploads/2025/09/coffret-totem-rh4.jpg-100x100.png"
+																class="attachment-48x48 size-48x48 skip-lazy no-lazyload lazyload-disabled no-lazy skip-lazyload"
+																alt="Rosh Hashanah Gift Box 4" data-skip-lazy="true"
+																style="border: none; display: inline-block; font-size: 14px; font-weight: bold; height: auto; outline: none; text-decoration: none; text-transform: capitalize; vertical-align: middle; margin-right: 24px; max-width: 100%;"
+																border="0"></td>
+														<td
+															style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+															<font dir="auto" style="vertical-align: inherit;">
+																<font dir="auto" style="vertical-align: inherit;">
+																	Rosh Hashanah Gift Box 4</font>
+															</font>
+															<div class="email-order-item-meta"
+																style="color: #b7c4ca; font-size: 14px; line-height: 140%;">
+															</div>
+															<div class="afb-order-itemmeta-display"
+																style="margin-top: 6px;">
+																<div style="margin-bottom: 4px;"><strong>
+																		<font dir="auto"
+																			style="vertical-align: inherit;">
+																			<font dir="auto"
+																				style="vertical-align: inherit;">
+																				Recipient Address</font>
+																		</font>
+																	</strong></div>
+																<table class="afb-mini-address"
+																	style="margin-top: 4px; border-collapse: collapse; font-size: 12px;">
+																	<tbody>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						First Name</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Sides</font>
+																				</font>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Last Name</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				Faisal</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Address line 1</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				555 testing</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						City</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Islamabad</font>
+																				</font>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Postcode</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						04491</font>
+																				</font>
+																			</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Country</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						THE</font>
+																				</font>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+																<table class="afb-mini-contact"
+																	style="margin-top: 8px; border-collapse: collapse; font-size: 12px;">
+																	<tbody>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Recipient’s Phone Number</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				03554743722</td>
+																		</tr>
+																		<tr>
+																			<th style="padding-left: 0; padding: 4px 6px; text-align: left; color: #444; font-weight: 600; min-width: 120px;"
+																				align="left">
+																				<font dir="auto"
+																					style="vertical-align: inherit;">
+																					<font dir="auto"
+																						style="vertical-align: inherit;">
+																						Gift Message</font>
+																				</font>
+																			</th>
+																			<td
+																				style="vertical-align: middle; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; border: 0; padding: 0;">
+																				testing 22</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+										<td class="td font-family text-align-right"
+											style="color: #4b4b4b; border: 0; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: right; padding: 8px 12px; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; vertical-align: middle;"
+											align="right">
+											<font dir="auto" style="vertical-align: inherit;">
+												<font dir="auto" style="vertical-align: inherit;">
+													×1 </font>
+											</font>
+										</td>
+										<td class="td font-family text-align-right"
+											style="color: #4b4b4b; border: 0; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: right; padding: 8px 12px; padding-right: 0; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; vertical-align: middle;"
+											align="right">
+											<span class="woocommerce-Price-amount amount">
+												<font dir="auto" style="vertical-align: inherit;">
+													<font dir="auto" style="vertical-align: inherit;">500&nbsp;</font>
+												</font><span class="woocommerce-Price-currencySymbol">
+													<font dir="auto" style="vertical-align: inherit;">
+														<font dir="auto" style="vertical-align: inherit;">₪</font>
+													</font>
+												</span>
+											</span>
+										</td>
+									</tr>
+
+								</tbody>
+								<tfoot>
+									<tr class="order-totals order-totals-subtotal">
+										<th class="td text-align-left" scope="row" colspan="2"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: left; padding: 8px 12px; font-weight: normal; padding-bottom: 5px; padding-left: 0; padding-top: 24px; border-top-width: 4px;"
+											align="left">
+											Subtotal: </th>
+										<td class="td text-align-right"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: right; padding: 8px 12px; font-weight: normal; padding-bottom: 5px; padding-right: 0; padding-top: 24px; border-top-width: 4px;"
+											align="right"><span class="woocommerce-Price-amount amount">1,000&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₪</span></span></td>
+									</tr>
+									<tr class="order-totals order-totals-shipping">
+										<th class="td text-align-left" scope="row" colspan="2"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: left; padding: 8px 12px; font-weight: normal; padding-bottom: 5px; padding-top: 5px; padding-left: 0;"
+											align="left">
+											Shipping: Home Delivery, Home Delivery </th>
+										<td class="td text-align-right"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: right; padding: 8px 12px; font-weight: normal; padding-bottom: 5px; padding-top: 5px; padding-right: 0;"
+											align="right"><span class="woocommerce-Price-amount amount">120&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₪</span></span></td>
+									</tr>
+									<tr class="order-totals order-totals-total">
+										<th class="td text-align-left" scope="row" colspan="2"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: left; padding: 8px 12px; padding-bottom: 5px; padding-top: 5px; font-weight: bold; padding-left: 0;"
+											align="left">
+											Total: </th>
+										<td class="td text-align-right"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: right; padding: 8px 12px; padding-bottom: 5px; padding-top: 5px; font-weight: bold; font-size: 20px; padding-right: 0;"
+											align="right"><span class="woocommerce-Price-amount amount">1,120&nbsp;<span
+													class="woocommerce-Price-currencySymbol">₪</span></span></td>
+									</tr>
+									<tr class="order-totals order-totals-payment_method order-totals-last">
+										<th class="td text-align-left" scope="row" colspan="2"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: left; padding: 8px 12px; font-weight: normal; padding-top: 5px; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; padding-left: 0;"
+											align="left">
+											Payment method: </th>
+										<td class="td text-align-right"
+											style="color: #4b4b4b; border: 0; vertical-align: middle; text-align: right; padding: 8px 12px; font-weight: normal; padding-top: 5px; border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 24px; padding-right: 0;"
+											align="right">
+											<font dir="auto" style="vertical-align: inherit;">
+												<font dir="auto" style="vertical-align: inherit;">Credit card</font>
+											</font>
+										</td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+
+						<table id="addresses" cellspacing="0" cellpadding="0" border="0"
+							style="width: 100%; vertical-align: top; margin-bottom: 0; padding: 0;" width="100%">
+							<tbody>
+								<tr>
+									<td class="font-family text-align-left" valign="top" width="50%"
+										style="font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; text-align: left; border: 0; padding: 0;"
+										align="left">
+										<b class="address-title"
+											style="color: #1e1e1e; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif;">Billing
+											address</b>
+
+										<address class="address"
+											style="color: #1e1e1e; font-style: normal; padding: 8px 0; word-break: break-all;">
+											store test teeee<br>Garrett and Stevens Plc<br>217 North Cowley
+											Extension<br>Sit minima error co<br>VELITEXSITLABORE <br><a
+												href="tel:+15564387221"
+												style="color: #b7c4ca; font-weight: normal; text-decoration: underline;">+1
+												(556) 438-7221</a> <br>bagekido@mailinator.com </address>
+									</td>
+
+								</tr>
+							</tbody>
+						</table>
+						<br>
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody>
+								<tr>
+									<td class="email-additional-content"
+										style="color: #1e1e1e; font-family: &quot;Helvetica Neue&quot;,Helvetica,Roboto,Arial,sans-serif; padding: 32px 0 0;">
+										<p style="text-align: center; margin: 0 0 16px;" align="center">
+											<font dir="auto" style="vertical-align: inherit;">
+												<font dir="auto" style="vertical-align: inherit;">Thank you for your
+													attention.</font>
+											</font>
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<!-- End Content -->
+</td>

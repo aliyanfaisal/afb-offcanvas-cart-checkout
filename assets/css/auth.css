@@ -1,0 +1,173 @@
+
+/* AFB Auth & Checkout Form Overrides — matches provided registration field style */
+/* Scope everything under the plugin drawer so it won't leak into theme */
+.afb-drawer, .afb-offcanvas, #afb-offcanvas {
+  --afb-ink: #1d1d1b;
+  --afb-ink-soft: #232323;
+  --afb-accent: #b7c4ca;
+  --afb-bg: #faf0e7;
+  --afb-letter: 2px;
+  --afb-label-size: 10px;
+  --afb-input-size: 12px;
+}
+
+/* Drawer look & feel (soft beige background like screenshot) */
+.afb-offcanvas .afb-panel,
+.afb-drawer .afb-panel,
+#afb-offcanvas .afb-panel{
+  background: var(--afb-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Labels */
+.afb-offcanvas .woocommerce form .form-row label,
+.afb-offcanvas .afb-form label,
+#afb-offcanvas .form-row label,
+.afb-drawer .form-row label,
+.afb-drawer .field-name{
+  text-transform: uppercase;
+  font-family: 'Sweet Sans On Air', sans-serif;
+  font-size: var(--afb-label-size);
+  letter-spacing: var(--afb-letter);
+  margin-bottom: 6px!important;
+  color: var(--afb-ink);
+  font-weight: 500;
+}
+
+/* Inputs, selects and textareas — underline style */
+.afb-offcanvas .woocommerce form .form-row input.input-text,
+.afb-offcanvas .woocommerce form .form-row textarea,
+.afb-offcanvas .woocommerce form .form-row select,
+.afb-offcanvas .afb-form input,
+.afb-offcanvas .afb-form select,
+.afb-offcanvas .afb-form textarea,
+#afb-offcanvas .rex-checkoutify-input,
+#afb-offcanvas .checkoutify-state-select,
+#afb-offcanvas input[type="tel"],
+#afb-offcanvas input[type="text"],
+#afb-offcanvas input[type="email"],
+#afb-offcanvas input[type="password"],
+#afb-offcanvas select,
+#afb-offcanvas textarea{
+  background: transparent!important;
+  border: 0!important;
+  border-bottom: 1px solid var(--afb-ink)!important;
+  border-radius: 0!important;
+  padding: 6px 0 14px 0!important;
+  height: auto!important;
+  box-shadow: none!important;
+  outline: none!important;
+  font-size: var(--afb-input-size)!important;
+  letter-spacing: var(--afb-letter)!important;
+  color: var(--afb-ink)!important;
+}
+
+/* Placeholder muted */
+#afb-offcanvas ::placeholder{ color:#777!important; opacity:1; letter-spacing: var(--afb-letter);}
+
+/* Remove select chrome arrow so we can keep the flat underline look */
+#afb-offcanvas select{
+  appearance:none; -webkit-appearance:none; -moz-appearance:none;
+  background-image:none!important;
+  padding-right: 20px!important;
+  position: relative;
+}
+
+/* Required asterisk color */
+#afb-offcanvas .required{ color:#e51f1f!important; margin-left: 3px;}
+
+/* Field spacing */
+#afb-offcanvas .woocommerce form .form-row,
+#afb-offcanvas .single-field.rex-checkoutify-form-group{
+  margin-bottom: 28px!important;
+}
+
+/* Two-column layout spacing fixes (left/right columns in panel) */
+#afb-offcanvas .checkout-col{ padding-left: 24px; padding-right: 24px;}
+
+/* Buttons — theme-proof */
+#afb-offcanvas .button,
+#afb-offcanvas button,
+#afb-offcanvas .woocommerce-button,
+#afb-offcanvas .woocommerce .button,
+#afb-offcanvas .afb-button{
+  background: var(--afb-ink)!important;
+  color: #fff!important;
+  border: 1px solid #000!important;
+  text-transform: uppercase!important;
+  letter-spacing: 1.5px!important;
+  font-weight: 500!important;
+  padding: 14px 18px!important;
+  border-radius: 0!important;
+  box-shadow: none!important;
+}
+
+/* Button hover/active should not be overridden by theme */
+#afb-offcanvas .button:hover,
+#afb-offcanvas button:hover,
+#afb-offcanvas .woocommerce .button:hover,
+#afb-offcanvas .button:focus,
+#afb-offcanvas button:focus{
+  background: #000!important;
+  color:#fff!important;
+  border-color:#000!important;
+}
+
+/* Step tabs look (subtle bottom border under the current step) */
+#afb-offcanvas .afb-steps,
+#afb-offcanvas .afb-steps ul{ list-style:none; margin:0; padding:0;}
+#afb-offcanvas .afb-steps li{ text-align:center; color:#d1d2d4; padding:18px 0; border-bottom:2px solid #d1d2d4;}
+#afb-offcanvas .afb-steps li.is-active{ color:#000; border-bottom-color:#000;}
+#afb-offcanvas .afb-steps a{
+  font-weight: 500; font-size: 9px; line-height: 7px; text-transform: uppercase;
+  letter-spacing: var(--afb-letter); color:#000; text-decoration:none;
+}
+
+/* Greeting line */
+#afb-offcanvas .afb-greeting{ text-transform: uppercase; letter-spacing: var(--afb-letter);}
+
+/* Error/info alert block inside panel */
+#afb-offcanvas .afb-alert{
+  display:block!important; font-size: 9px; padding: 9px 14px; border:1px solid #ebcccc; background:#f2dede; color:#a94442;
+}
+
+/* Tighten select2 if present */
+#afb-offcanvas .select2-container--default .select2-selection--single{
+  background:transparent; border:0; border-bottom:1px solid var(--afb-ink); border-radius:0; height:auto;
+}
+#afb-offcanvas .select2-container--default .select2-selection--single .select2-selection__rendered{
+  padding-left:0; padding-right:0; line-height:1.4; color:var(--afb-ink);
+}
+#afb-offcanvas .select2-container--default .select2-selection--single .select2-selection__arrow{ right:0;}
+
+
+/* ===== AFB Patch: ensure login/register forms match reference ===== */
+#afb-checkout-panel .woocommerce form.login .form-row,
+#afb-checkout-panel .woocommerce form.register .form-row{ margin-bottom:16px; }
+
+#afb-checkout-panel .woocommerce form.login input.input-text,
+#afb-checkout-panel .woocommerce form.register input.input-text{
+  background:transparent;
+  border:0;
+  border-bottom:1px solid #1d1d1b;
+  border-radius:0;
+  padding:6px 0;
+  font-size:12px;
+  color:#1d1d1b;
+}
+
+#afb-checkout-panel .woocommerce form.login button.button,
+#afb-checkout-panel .woocommerce form.register button.button{
+  background:#1d1d1b !important;
+  color:#fff !important;
+  border:1px solid #000 !important;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+#afb-checkout-panel .woocommerce form.login button.button:hover,
+#afb-checkout-panel .woocommerce form.register button.button:hover{
+  background:#000 !important;
+  color:#fff !important;
+  border-color:#000 !important;
+}

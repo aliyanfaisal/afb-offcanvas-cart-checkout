@@ -1640,7 +1640,7 @@ if (is_wc_endpoint_url('order-pay')) {
         }
 		
 		nav.afb-steps{
-			height:100px !important
+			height:auto !important
 		}
 		nav.afb-steps ol{
 			gap:10px !important;
@@ -1658,7 +1658,7 @@ if (is_wc_endpoint_url('order-pay')) {
 /* 		.afb-order-col-qty,
 		.afb-order-item-qty, */
 		.afb-order-item-name{
-			display: none !important
+			/* display: none !important */
 		}
 		
 		.afb-next-button{

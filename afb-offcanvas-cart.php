@@ -1,9 +1,9 @@
 <?php
 
 /**
- * Plugin Name: AFB Off-Canvas Cart (Slide-In) - Final
+ * Plugin Name: AFB Off-Canvas Cart (Slide-In) - NEW THANKYOU PAGE - WORKING
  * Description: Pixel-perfect off-canvas Cart drawer for WooCommerce. Store info in emails and typ. zooming . Store name into ID - EMAIL CHANGES - added custom order item section -- added textdomain to json res -- reorder button
- * Version: 0.4.4
+ * Version: 0.4.6
  * Author: AFB
  * Text Domain: afb-offcanvas
  * Domain Path: /languages
@@ -82,6 +82,14 @@ if (
             }
         }
     });
+
+    add_filter('woocommerce_locate_template', function ($template, $template_name, $template_path) {
+        if ($template_name === 'checkout/thankyou.php') {
+            $custom = AFB_OFFCANVAS_DIR . 'templates/checkout/thankyou.php';
+            if (file_exists($custom)) { return $custom; }
+        }
+        return $template;
+    }, 10, 3);
 
     add_action("wp_footer", function () { ?>
         <style>
@@ -823,7 +831,6 @@ add_filter('auth_cookie_expiration', function ($expiration, $user_id, $remember)
     return 90 * DAY_IN_SECONDS;
 
 }, 10, 3);
-
 
 
 

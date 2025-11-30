@@ -8,6 +8,8 @@ class Cart {
     add_action('wp_ajax_nopriv_afb_cart_update_qty',[__CLASS__,'ajax_update_qty']);
     add_action('wp_ajax_afb_cart_remove',[__CLASS__,'ajax_remove_item']);
     add_action('wp_ajax_nopriv_afb_cart_remove',[__CLASS__,'ajax_remove_item']);
+    add_action('wp_ajax_afb_add_to_cart',[__CLASS__,'ajax_add_item']);
+    add_action('wp_ajax_nopriv_afb_add_to_cart',[__CLASS__,'ajax_add_item']);
   }
   protected static function render_items_html() : string {
     ob_start();
@@ -59,5 +61,21 @@ class Cart {
     check_ajax_referer('afb_nonce','nonce'); $key=sanitize_text_field($_POST['cart_key']??''); if(!$key) wp_send_json_error();
     WC()->cart->remove_cart_item($key); WC()->cart->calculate_totals();
     wp_send_json_success(['items'=>self::render_items_html(),'totals'=>self::render_totals_html()]);
+  }
+  public static function ajax_add_item() : void {
+    check_ajax_referer('afb_nonce','nonce');
+    $pid = intval($_POST['product_id']??0);
+    $vid = intval($_POST['variation_id']??0);
+    $qty = max(1,intval($_POST['qty']??1));
+    if(!$pid){ wp_send_json_error(['message'=>'bad_request']); }
+    $cart = WC()->cart; if(!$cart){ wp_send_json_error(['message'=>'no_cart']); }
+    $variation = [];
+    $added = $cart->add_to_cart($pid,$qty,$vid,$variation);
+    if($added){
+      $cart->calculate_totals();
+      wp_send_json_success(['items'=>self::render_items_html(),'totals'=>self::render_totals_html()]);
+    } else {
+      wp_send_json_error(['message'=>'add_failed']);
+    }
   }
 }

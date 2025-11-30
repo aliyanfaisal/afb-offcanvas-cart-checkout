@@ -234,18 +234,19 @@ add_action('woocommerce_order_details_after_customer_details', function ($order)
     $billing_email = $order->get_billing_email();
 
     echo '<div style="margin-top:12px;">';
-    echo '<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items:start">';
+    echo '<style>@media(max-width:480px){.afb-pickup-grid{grid-template-columns:1fr!important}}</style>';
+    echo '<div class="afb-pickup-grid" style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items:start">';
     echo '<div>';
     echo '<b>' . esc_html(__('Billing address', 'woocommerce')) . '</b>';
     echo '<address style="padding:8px 0; word-break:break-all">' . wp_kses_post($billing_address_html);
-    if ($billing_phone) { echo '<br><a href="tel:' . esc_attr($billing_phone) . '" target="_blank" style="color:#b7c4ca; font-weight:normal; text-decoration:underline">' . esc_html($billing_phone) . '</a>'; }
-    if ($billing_email) { echo '<br><a href="mailto:' . esc_attr($billing_email) . '" target="_blank" style="color:#b7c4ca; font-weight:normal; text-decoration:underline">' . esc_html($billing_email) . '</a>'; }
+    if ($billing_phone) { echo '<br><a href="tel:' . esc_attr($billing_phone) . '" target="_blank" style="color:#232323; font-weight:normal; text-decoration:underline">' . esc_html($billing_phone) . '</a>'; }
+    if ($billing_email) { echo '<br><a href="mailto:' . esc_attr($billing_email) . '" target="_blank" style="color:#232323; font-weight:normal; text-decoration:underline">' . esc_html($billing_email) . '</a>'; }
     echo '</address>';
     echo '</div>';
     echo '<div>';
     echo '<b>' . esc_html__('In-Store Pickup Info', 'afb-offcanvas') . '</b>';
     $info = function_exists('afb_get_store_info') ? afb_get_store_info($pickup_location) : null;
-    echo '<div style="padding:8px 0;">';
+    echo '<address style="padding:8px 0;">';
     if ($info && ($info['address'] || $info['city'] || $info['phone'])) {
         echo '<p style="margin:0;">' . esc_html( $info['name'] ) . '</p>';
         if ($info['address']) { echo '<p style="margin:0;">' . esc_html( $info['address'] ) . '</p>'; }
@@ -254,7 +255,7 @@ add_action('woocommerce_order_details_after_customer_details', function ($order)
     } else {
         echo '<p style="margin:0;">' . esc_html( function_exists('afb_format_pickup_location') ? afb_format_pickup_location($pickup_location) : $pickup_location ) . '</p>';
     }
-    echo '</div>';
+    echo '</address>';
     echo '</div>';
     echo '</div>';
     echo '</div>';

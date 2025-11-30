@@ -21,107 +21,25 @@ function add_reorder_button_to_orders($actions, $order) {
 }
 
 // Handle the reorder request
-add_action('template_redirect', 'handle_reorder_request');
-function handle_reorder_request() {
-    // Check if this is a reorder request
-    if (!isset($_GET['reorder']) || !isset($_GET['reorder_nonce'])) {
-        return;
-    }
-
-    // Verify nonce
-    if (!wp_verify_nonce($_GET['reorder_nonce'], 'woocommerce-reorder')) {
-        wc_add_notice(__('Security check failed', 'woocommerce'), 'error');
-        wp_safe_redirect(wc_get_account_endpoint_url('orders'));
-        exit;
-    }
-
-    $order_id = absint($_GET['reorder']);
-    
-    // Check if user owns this order
-    if (!current_user_can('view_order', $order_id)) {
-        wc_add_notice(__('You cannot reorder this order', 'woocommerce'), 'error');
-        wp_safe_redirect(wc_get_account_endpoint_url('orders'));
-        exit;
-    }
-
+add_action('wp_ajax_afb_get_order_items', 'afb_get_order_items');
+function afb_get_order_items() {
+    if (!isset($_POST['order_id']) || !isset($_POST['reorder_nonce'])) { wp_send_json_error(array('error' => 'bad_request')); }
+    if (!wp_verify_nonce($_POST['reorder_nonce'], 'woocommerce-reorder')) { wp_send_json_error(array('error' => 'invalid_nonce')); }
+    $order_id = absint($_POST['order_id']);
+    if (!current_user_can('view_order', $order_id)) { wp_send_json_error(array('error' => 'forbidden')); }
     $order = wc_get_order($order_id);
-    
-    if (!$order) {
-        wc_add_notice(__('Order not found', 'woocommerce'), 'error');
-        wp_safe_redirect(wc_get_account_endpoint_url('orders'));
-        exit;
+    if (!$order) { wp_send_json_error(array('error' => 'order_not_found')); }
+    $items = array();
+    foreach ($order->get_items() as $item) {
+        $items[] = array(
+            'product_id'   => (int) $item->get_product_id(),
+            'variation_id' => (int) $item->get_variation_id(),
+            'qty'          => max(1, (int) $item->get_quantity()),
+            'order_id'     => $order_id,
+        );
     }
-
-    // Check if WooCommerce cart is available
-    if (!WC()->cart) {
-        wc_add_notice(__('Cart not available', 'woocommerce'), 'error');
-        wp_safe_redirect(wc_get_account_endpoint_url('orders'));
-        exit;
-    }
-
-    // Clear current cart first
-    WC()->cart->empty_cart();
-    
-    $items_added = 0;
-    $failed_items = array();
-
-    // Add items to cart
-    foreach ($order->get_items() as $item_id => $item) {
-        try {
-            $product_id = $item->get_product_id();
-            $variation_id = $item->get_variation_id();
-            $quantity = $item->get_quantity();
-            
-            // Get product
-            $product = $variation_id ? wc_get_product($variation_id) : wc_get_product($product_id);
-            
-            if (!$product || !$product->is_purchasable()) {
-                $failed_items[] = $product ? $product->get_name() : sprintf(__('Product #%d', 'woocommerce'), $product_id);
-                continue;
-            }
-            
-            // Handle stock
-            if (!$product->has_enough_stock($quantity)) {
-                $available = $product->get_stock_quantity();
-                if ($available > 0) {
-                    $quantity = $available;
-                } else {
-                    $failed_items[] = $product->get_name();
-                    continue;
-                }
-            }
-            
-            // Handle variations
-            $variation = array();
-            if ($variation_id) {
-                $variation = wc_get_product_variation_attributes($variation_id);
-            }
-            
-            // Add to cart
-            if (WC()->cart->add_to_cart($product_id, $quantity, $variation_id, $variation)) {
-                $items_added++;
-            } else {
-                $failed_items[] = $product->get_name();
-            }
-            
-        } catch (Exception $e) {
-            $failed_items[] = isset($product) ? $product->get_name() : sprintf(__('Product #%d', 'woocommerce'), $product_id);
-        }
-    }
-
-    // Add notices
-    if ($items_added > 0) {
-        wc_add_notice(sprintf(__('%d items from order #%s added to cart.', 'woocommerce'), $items_added, $order->get_order_number()), 'success');
-    }
-    
-    if (!empty($failed_items)) {
-        wc_add_notice(sprintf(__('Could not add these items: %s', 'woocommerce'), implode(', ', $failed_items)), 'error');
-    }
-
-    // Redirect to cart
-//     wp_safe_redirect(wc_get_cart_url());
-	 wp_safe_redirect('/cart');
-    exit;
+    $afb_nonce = wp_create_nonce('afb_nonce');
+    wp_send_json_success(array('items' => $items, 'afb_nonce' => $afb_nonce));
 }
 
 // Add simple CSS for the button
@@ -143,7 +61,50 @@ function add_reorder_button_css() {
             background-color: #005a87 !important;
             color: white !important;
         }
+        #afb-reorder-loader { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); z-index: 999999; }
+        #afb-reorder-loader.active { display: flex; }
+        #afb-reorder-loader .inner { background: #fff; padding: 12px 16px; border: 1px solid #ddd; border-radius: 4px; font-size: 14px; color: #333; }
         </style>
+        <script>
+        document.addEventListener('click', function(e){
+            var t = e.target;
+            if (t && t.classList && t.classList.contains('reorder')) {
+                e.preventDefault();
+                var loader = document.getElementById('afb-reorder-loader');
+                if (!loader) { loader = document.createElement('div'); loader.id = 'afb-reorder-loader'; loader.innerHTML = '<div class="inner">Processing…</div>'; document.body.appendChild(loader); }
+                loader.classList.add('active');
+                try { t.disabled = true; t.classList.add('loading'); } catch (err) {}
+                var href = t.getAttribute('href') || '';
+                var m1 = href.match(/[?&]reorder=(\d+)/);
+                var m2 = href.match(/[?&]reorder_nonce=([^&#]+)/);
+                if (!m1 || !m2) { return; }
+                var orderId = parseInt(m1[1], 10);
+                var nonce = decodeURIComponent(m2[1]);
+                var ajaxUrl = '<?php echo esc_js( admin_url('admin-ajax.php') ); ?>';
+                fetch(ajaxUrl, { method:'POST', headers:{ 'Content-Type':'application/x-www-form-urlencoded' }, body: new URLSearchParams({ action:'afb_get_order_items', order_id: orderId, reorder_nonce: nonce }) })
+                .then(function(r){ return r.json(); })
+                .then(function(json){
+                    if (!json || !json.success) { try { loader.classList.remove('active'); t.disabled=false; t.classList.remove('loading'); } catch (err) {} alert('Failed to load order items'); return; }
+                    var items = json.data.items || [];
+                    var afbNonce = json.data.afb_nonce || '';
+                    var seq = Promise.resolve();
+                    items.forEach(function(it){
+                        seq = seq.then(function(){
+                            return fetch(ajaxUrl, { method:'POST', headers:{ 'Content-Type':'application/x-www-form-urlencoded' }, body: new URLSearchParams({ action:'afb_add_to_cart', nonce: afbNonce, product_id: it.product_id, variation_id: it.variation_id, qty: it.qty }) })
+                                   .then(function(r){ return r.json(); });
+                        });
+                    });
+                    seq.then(function(){
+                        try {
+                            var url = new URL(window.location.href);
+                            url.searchParams.set('open_afb_cart', 'true');
+                            window.location.href = url.toString();
+                        } catch (e) { window.location.reload(); }
+                    });
+                });
+            }
+        });
+        </script>
         <?php
     }
 }

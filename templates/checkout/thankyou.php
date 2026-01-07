@@ -267,6 +267,22 @@ if (!$order) {
       <div><?php echo esc_html__("Moyen de paiement :", "afb-offcanvas") . " " . esc_html($order->get_payment_method_title()); ?></div>
       <div><?php echo esc_html__("Mode de livraison :", "afb-offcanvas") . " " . esc_html($delivery_label); ?></div>
     </div>
+
+    <?php 
+    // Print Invoice Button - Only for Processing/Completed orders
+    if ( class_exists('Opigm_Utils') && Opigm_Utils::is_order_invoiceable( $order ) ) {
+      $invoice_url = wp_nonce_url( 
+        admin_url( 'admin-ajax.php?action=opigm_print_invoice&order_id=' . $order->get_id() . '&key=' . $order->get_order_key() ), 
+        'opigm_print_invoice', 
+        'nonce' 
+      );
+      echo '<div style="text-align: center; margin-top: 30px;">';
+      echo '<a href="' . esc_url( $invoice_url ) . '" class="button" target="_blank" style="display: inline-block; padding: 12px 24px; background: #232323; color: #fff; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600;">';
+      echo esc_html__( 'Télécharger la facture PDF', 'afb-offcanvas' );
+      echo '</a>';
+      echo '</div>';
+    }
+    ?>
   <?php endif; ?>
 
 

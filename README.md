@@ -1,4 +1,4 @@
-# AFB Off‑Canvas Cart (Slide‑In) – Final
+# AFB Off‑Canvas Cart (Slide‑In) 
 
 A WooCommerce extension that adds an off‑canvas cart drawer, a streamlined reorder flow, and a custom Thank You page with mobile/RTL support.
 
